@@ -42,4 +42,4 @@ There are some more caveats listed at <https://askubuntu.com/questions/23009/why
 
 # Credits
 
-The `run-parts.sh` script is taken from <https://github.com/wolfbox/run-parts> (there are alternatives such as that in <https://github.com/cronie-crond/crontabs>) and `on_ac_power` from <https://github.com/OpenRC/openrc/tree/master/scripts>
+The `run-parts.sh` script is taken from <https://github.com/wolfbox/run-parts> (there are alternatives such as that in <https://github.com/cronie-crond/crontabs>), `on_ac_power` from <https://github.com/OpenRC/openrc/tree/master/scripts> and `cronic` is available at [Chuck Houpt's homepage](http://habilis.net/cronic/).

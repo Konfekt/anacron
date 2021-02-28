@@ -1,4 +1,4 @@
-# /usr/sbin/anacron -S "$XDG_CACHE_HOME/anacron" -t "$XDG_CONFIG_HOME/anacrontab" -s
+# /usr/sbin/anacron -S "$XDG_DATA_HOME/anacron" -t "$XDG_CONFIG_HOME/anacrontab" -s
 SHELL=/bin/bash
 USER=KONFEKT
 HOME=/home/KONFEKT
@@ -16,8 +16,8 @@ RANDOM_DELAY=5
 # START_HOURS_RANGE=10-16
 
 # period  delay  job-identifier  command
-@daily    0   daily.on_line  chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.daily/on_line > "$XDG_CACHE_HOME/anacron/daily.on_line.log" 2>&1
-@weekly   5   weekly.on_line       chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.weekly/on_line > "$XDG_CACHE_HOME/anacron/weekly.on_line.log" 2>&1
-@monthly  30  monthly.on_line      chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.monthly/on_line > "$XDG_CACHE_HOME/anacron/monthly.on_line.log" 2>&1
+@daily    0   daily.on_line  cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.daily/on_line
+@weekly   5   weekly.on_line       cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.weekly/on_line
+@monthly  30  monthly.on_line      cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.monthly/on_line
 
 # ex:ft=crontab 

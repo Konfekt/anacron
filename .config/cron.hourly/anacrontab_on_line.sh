@@ -10,6 +10,5 @@
 nc -zw3 github.com 22 || exit 0
 
 mkdir --parents "$XDG_DATA_HOME/anacron"
-mkdir --parents "$XDG_CACHE_HOME/anacron"
 /usr/sbin/anacron -S "$XDG_DATA_HOME/anacron" -t "$XDG_CONFIG_HOME/anacrontab/on_line" -s
 

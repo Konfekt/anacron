@@ -16,6 +16,6 @@ MAILTO=KONFEKT
 RANDOM_DELAY=5
 
 # period      command
-0,10,20,30,40,50 * * * *  chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/cron.hourly > "$XDG_CACHE_HOME/cron.hourly.log" 2>&1
+0,10,20,30,40,50 * * * *  cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/cron.hourly
 
 # ex:ft=crontab 
