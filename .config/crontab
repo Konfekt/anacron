@@ -9,6 +9,7 @@ BASH_ENV=/home/KONFEKT/.bash_profile
 XDG_CONFIG_HOME=/home/KONFEKT/.config
 XDG_CACHE_HOME=/home/KONFEKT/.cache
 XDG_DATA_HOME=/home/KONFEKT/.local/share
+XDG_STATE_HOME=/home/KONFEKT/.local/state
 PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/home/KONFEKT/bin:/home/KONFEKT/.local/bin
 # DISPLAY=:0
 MAILTO=KONFEKT
