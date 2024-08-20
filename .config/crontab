@@ -5,7 +5,7 @@ HOME=/home/KONFEKT
 # See http://unix.stackexchange.com/questions/138577/how-to-guarantee-availability-of-bash-env/138609#138609
 BASH_ENV=/home/KONFEKT/.bash_profile
 # or:
-# @daily  bash -l -c 'run-parts.sh $HOME/.config/cron.daily'
+# 1       bash -l -c 'run-parts.sh $HOME/.config/cron.daily'
 XDG_CONFIG_HOME=/home/KONFEKT/.config
 XDG_CACHE_HOME=/home/KONFEKT/.cache
 XDG_DATA_HOME=/home/KONFEKT/.local/share

@@ -5,7 +5,7 @@ HOME=/home/KONFEKT
 # See http://unix.stackexchange.com/questions/138577/how-to-guarantee-availability-of-bash-env/138609#138609
 BASH_ENV=/home/KONFEKT/.bash_profile
 # or:
-# @daily       0      daily    bash -l -c 'run-parts.sh $HOME/.config/anacron.daily'
+# 1            0      daily    bash -l -c 'run-parts.sh $HOME/.config/anacron.daily'
 XDG_CONFIG_HOME=/home/KONFEKT/.config
 XDG_CACHE_HOME=/home/KONFEKT/.cache
 XDG_DATA_HOME=/home/KONFEKT/.local/share
@@ -17,8 +17,8 @@ RANDOM_DELAY=5
 # START_HOURS_RANGE=10-16
 
 # period  delay  job-identifier  command
-@daily    0   daily.on_line  cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.daily/on_line
-@weekly   5   weekly.on_line       cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.weekly/on_line
+1         0   daily.on_line  cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.daily/on_line
+7         5   weekly.on_line       cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.weekly/on_line
 @monthly  30  monthly.on_line      cronic chrt --idle 0 ionice -c2 -n7 run-parts.sh -v $XDG_CONFIG_HOME/anacron.monthly/on_line
 
 # ex:ft=crontab 
